@@ -1,0 +1,89 @@
+{
+  "projectType": "saas",
+  "projectName": "SmartRoll",
+  "projectDescription": "AI-powered facial recognition attendance system that automates classroom roll-call using Django, Celery, and computer vision.",
+  "theme": "almond",
+  "primaryColor": "#6366f1",
+  "lightColor": "#818cf8",
+  "darkColor": "#4f46e5",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/facial-recognition",
+              "features/student-management",
+              "features/attendance-tracking",
+              "features/async-processing"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/production",
+              "deployment/environment-variables"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "architecture/overview",
+              "architecture/database-schema",
+              "architecture/celery-tasks"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Core Modules",
+            "pages": [
+              "api/face-recognition-engine",
+              "api/views",
+              "api/models"
+            ]
+          },
+          {
+            "group": "Scripts",
+            "pages": [
+              "api/encode-faces",
+              "api/stress-test"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Asynchronous face encoding using Celery and Redis",
+    "Real-time facial recognition with 100% accuracy on stress-tested datasets",
+    "Full CRUD interface for student enrollment and management",
+    "PostgreSQL database for production-grade data persistence",
+    "Docker-based containerized deployment with multiple services",
+    "Visual feedback with bounding boxes and labels on processed images"
+  ],
+  "publicApiSurface": [
+    "process_attendance(image_path, all_students)",
+    "rebuild_encodings_task.delay()",
+    "attendance_view(request)",
+    "add_student_view(request)",
+    "student_list_view(request)",
+    "delete_student_view(request, student_id)",
+    "encode_faces()",
+    "stress_test()"
+  ]
+}
